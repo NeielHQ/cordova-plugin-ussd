@@ -1,0 +1,33 @@
+{
+    "name": "cordova-plugin-ussd",
+    "version": "0.0.1",
+    "description": "for sending ussd",
+    "cordova": {
+      "id": "cordova-plugin-ussd",
+      "platforms": [
+        "android"
+      ]
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/NaijaSteveJobs/ussd/ussd.git"
+    },
+    "keywords": [
+      "ussd",
+      "Notification",
+      "ecosystem:cordova",
+      "cordova-android"
+    ],
+    "engines": [
+      {
+        "name": "cordova",
+        "version": ">=3.0.0"
+      }
+    ],
+    "author": "Neiel <dev@neiel.ng>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/NaijaSteveJobs/ussd/issues"
+    },
+    "homepage": "https://github.com/NaijaSteveJobs/ussd/"
+  }
