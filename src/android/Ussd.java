@@ -68,7 +68,7 @@ public class Ussd extends CordovaPlugin {
 
                   Log.e("TAG", "onReceiveUssdResponseFailed: " + "" + failureCode + request);
 //                   callbackContext.error("onReceiveUssdResponseFailed: " + "" + failureCode + request);
-                    callbackContext.sendPluginResult(new PluginResult(Status.OK,failureCode + request));
+                    callbackContext.sendPluginResult(new PluginResult(Status.ERROR,failureCode + request));
 
 
               }
