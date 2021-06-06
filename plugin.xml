@@ -23,6 +23,10 @@
             </feature>
         </config-file>
 
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.CALL_PHONE" />
+        </config-file>
+
         <source-file src="src/android/Ussd.java" target-dir="src/ng/neiel/cordova/plugins"/>
     </platform>
 
