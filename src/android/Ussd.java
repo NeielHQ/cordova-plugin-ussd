@@ -38,7 +38,7 @@ public class Ussd extends CordovaPlugin {
                   super.onReceiveUssdResponse(telephonyManager, request, response);
 
                   Log.e("TAG", "onReceiveUssdResponse:  Ussd Response = " + response.toString().trim() );
-                    callbackContext.success(new PluginResult(PluginResult.Status.OK, response.toString().trim()));
+                    callbackContext.success("onReceiveUssdResponse:  Ussd Response = " + response.toString().trim());
 
 
 
@@ -50,7 +50,7 @@ public class Ussd extends CordovaPlugin {
                   super.onReceiveUssdResponseFailed(telephonyManager, request, failureCode);
 
                   Log.e("TAG", "onReceiveUssdResponseFailed: " + "" + failureCode + request);
-                  callbackContext.error(new PluginResult(PluginResult.Status.OK, "We Bad"));
+                  callbackContext.error("onReceiveUssdResponseFailed: " + "" + failureCode + request);
 
               }
           }, new Handler());
