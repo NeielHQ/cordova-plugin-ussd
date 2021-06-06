@@ -1,7 +1,7 @@
 {
     "name": "cordova-plugin-ussd",
-    "version": "0.0.1",
-    "description": "for sending ussd",
+    "version": "0.0.2",
+    "description": "Cordova plugin for dialing USSD",
     "cordova": {
       "id": "cordova-plugin-ussd",
       "platforms": [
@@ -10,7 +10,7 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/NaijaSteveJobs/ussd/ussd.git"
+      "url": "git+https://github.com/NeielHQ/cordova-plugin-ussd/"
     },
     "keywords": [
       "ussd",
@@ -27,7 +27,7 @@
     "author": "Neiel <dev@neiel.ng>",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/NaijaSteveJobs/ussd/issues"
+      "url": "https://github.com/NeielHQ/cordova-plugin-ussd/issues"
     },
-    "homepage": "https://github.com/NaijaSteveJobs/ussd/"
+    "homepage": "https://github.com/NeielHQ/cordova-plugin-ussd/"
   }

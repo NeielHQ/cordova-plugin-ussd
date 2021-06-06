@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-plugin-ussd" version="0.0.1">
+        id="cordova-plugin-ussd" version="0.0.2">
     <name>ussd</name>
-    <description>Cordova ussd Plugin</description>
+    <description>Cordova plugin for dialing USSD</description>
     <author>Neiel Enterprises</author>
     <license>Apache 2.0</license>
     <keywords>cordova,device</keywords>
-     <repo>https://github.com/NaijaSteveJobs/ussd/ussd.git</repo>
-    <issue>https://github.com/NaijaSteveJobs/ussd/issues</issue>
+     <repo>https://github.com/NeielHQ/cordova-plugin-ussd/</repo>
+    <issue>https://github.com/NeielHQ/cordova-plugin-ussd/issues</issue>
     <js-module src="www/ussd.js" name="ussd">
         <clobbers target="ussd" />
     </js-module>
     <platform name="android">
             <config-file target="config.xml" parent="/*">
                 <feature name="ussd">
-                    <param name="android-package" value="ng.neiel.cordova.plugin.ussd"/>
+                    <param name="android-package" value="ng.neiel.cordova.plugin"/>
                 </feature>
              </config-file>
 
 
-        <source-file src="src/android/ussd.java" target-dir="src/ng/neiel/cordova/plugin/ussd" />
+        <source-file src="src/android/ussd.java" target-dir="src/ng/neiel/cordova/plugin/" />
         <!-- <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/> -->
           
     </platform>
