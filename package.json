@@ -1,33 +1,28 @@
 {
-    "name": "cordova-plugin-ussd",
-    "version": "0.0.2",
-    "description": "Cordova plugin for dialing USSD",
-    "cordova": {
-      "id": "cordova-plugin-ussd",
-      "platforms": [
-        "android"
-      ]
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/NeielHQ/cordova-plugin-ussd/"
-    },
-    "keywords": [
-      "ussd",
-      "Notification",
-      "ecosystem:cordova",
-      "cordova-android"
-    ],
-    "engines": [
-      {
-        "name": "cordova",
-        "version": ">=3.0.0"
-      }
-    ],
-    "author": "Neiel <dev@neiel.ng>",
-    "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/NeielHQ/cordova-plugin-ussd/issues"
-    },
-    "homepage": "https://github.com/NeielHQ/cordova-plugin-ussd/"
-  }
+  "name": "cordova-plugin-ussd",
+  "version": "0.1.0",
+  "description": "Cordova plugin for dialing USSD codes",
+  "cordova": {
+    "id": "cordova-plugin-ussd",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeielHQ/cordova-plugin-ussd.git"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "USSD",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "NeielHQ",
+  "license": "Apache-2",
+  "bugs": {
+    "url": "https://github.com/NeielHQ/cordova-plugin-ussd/issues"
+  },
+  "homepage": "https://github.com/NeielHQ/cordova-plugin-ussd#readme"
+}

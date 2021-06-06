@@ -1,26 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-plugin-ussd" version="0.0.2">
-    <name>ussd</name>
-    <description>Cordova plugin for dialing USSD</description>
-    <author>Neiel Enterprises</author>
-    <license>Apache 2.0</license>
-    <keywords>cordova,device</keywords>
-     <repo>https://github.com/NeielHQ/cordova-plugin-ussd/</repo>
-    <issue>https://github.com/NeielHQ/cordova-plugin-ussd/issues</issue>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="ng.neiel.cordova.plugins.ussd"
+        version="0.7.0">
+
+    <name>Ussd</name>
+
+    <engines>
+        <engine name="cordova" version=">=3.4.0"/>
+    </engines>
+
+    <asset src="www/ussd.js" target="js/ussd.js"/>
+
     <js-module src="www/ussd.js" name="ussd">
         <clobbers target="ussd" />
     </js-module>
+
     <platform name="android">
-            <config-file target="config.xml" parent="/*">
-                <feature name="ussd">
-                    <param name="android-package" value="ng.neiel.cordova.plugin"/>
-                </feature>
-             </config-file>
 
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Ussd">
+                <param name="android-package" value="ng.neiel.cordova.plugins.Ussd"/>
+            </feature>
+        </config-file>
 
-        <source-file src="src/android/ussd.java" target-dir="src/ng/neiel/cordova/plugin/" />
-        <!-- <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/> -->
-          
+        <source-file src="src/android/Ussd.java" target-dir="src/ng/neiel/cordova/plugins"/>
     </platform>
+
+<!--    <platform name="ios">-->
+
+<!--        <config-file target="config.xml" parent="/widget">-->
+<!--            <feature name="Hello">-->
+<!--                <param name="ios-package" value="HWPHello" />-->
+<!--            </feature>-->
+<!--        </config-file>-->
+
+<!--        <header-file src="src/ios/HWPHello.h" target-dir="HelloPlugin"/>-->
+<!--        <source-file src="src/ios/HWPHello.m" target-dir="HelloPlugin"/>-->
+<!--    </platform>-->
+
+
+
 </plugin>
