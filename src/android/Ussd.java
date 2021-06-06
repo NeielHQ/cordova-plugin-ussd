@@ -27,10 +27,23 @@ public class Ussd extends CordovaPlugin {
 //             String name = data.getString(0);
 //             String message = "Hello, " + name;
 
+            //use SIM 1
           TelephonyManager manager = (TelephonyManager) cordova.getActivity().getSystemService(Context.TELEPHONY_SERVICE);
-          TelephonyManager manager2 = manager.createForSubscriptionId(2);
+          //get SIM 2 subscription ID
+           SubscriptionManager localSubscriptionManager = cordova.getActivity().SubscriptionManager.from(Context);
+           SubscriptionManager localSubscriptionManager = SubscriptionManager.from(cordova.getActivity());
+                  if (localSubscriptionManager.getActiveSubscriptionInfoCount() > 1) {
+                      List localList = localSubscriptionManager.getActiveSubscriptionInfoList();
 
-          TelephonyManager managerMain = (sim == 0) ? manager : manager2;
+                      SubscriptionInfo simInfo1 = (SubscriptionInfo) localList.get(0);
+                      SubscriptionInfo simInfo2 = (SubscriptionInfo) localList.get(1);
+
+
+                  }
+          // USE SIM 2
+          TelephonyManager manager2 = manager.createForSubscriptionId(simInfo1.getSubscriptionId());
+
+          TelephonyManager managerMain = (sim == 1) ? manager : manager2;
 
           managerMain.sendUssdRequest(ussdCode, new TelephonyManager.UssdResponseCallback() {
               @Override
@@ -38,7 +51,7 @@ public class Ussd extends CordovaPlugin {
                   super.onReceiveUssdResponse(telephonyManager, request, response);
 
                   Log.e("TAG", "onReceiveUssdResponse:  Ussd Response = " + response.toString().trim() );
-                    callbackContext.success("onReceiveUssdResponse:  Ussd Response = " + response.toString().trim());
+                    callbackContext.success(response.toString().trim());
 
 
 
