@@ -23,10 +23,10 @@ public class Ussd extends CordovaPlugin {
         if (action.equals("dial")) {
 
             String ussdCode = data.getString(0);
-            int sim=0;
+            int sim=data.getString(1);
 //             String name = data.getString(0);
 //             String message = "Hello, " + name;
-
+//todo add check for valid USSD code
             //use SIM 1
           TelephonyManager manager = (TelephonyManager) cordova.getActivity().getSystemService(Context.TELEPHONY_SERVICE);
           //get SIM 2 subscription ID
