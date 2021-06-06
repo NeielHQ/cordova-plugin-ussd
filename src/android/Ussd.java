@@ -11,6 +11,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.telephony.TelephonyManager;
+import android.telephony.SubscriptionInfo;
+import android.telephony.SubscriptionManager;
 import android.content.pm.PackageManager;
 import android.util.Log;
 import android.os.Handler;
@@ -27,6 +29,8 @@ public class Ussd extends CordovaPlugin {
 //             String name = data.getString(0);
 //             String message = "Hello, " + name;
 //todo add check for valid USSD code
+//todo add option to request for needed permission if its not granted
+
             //use SIM 1
           TelephonyManager manager = (TelephonyManager) cordova.getActivity().getSystemService(Context.TELEPHONY_SERVICE);
           //get SIM 2 subscription ID
