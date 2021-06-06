@@ -3,7 +3,7 @@
 //         callback('Nothing to echo.');
 //     }, "ussd", "dial", [str]);
 // };
-cordova.define
+// cordova.define
 var exec = require('cordova/exec');
 
 module.exports={
