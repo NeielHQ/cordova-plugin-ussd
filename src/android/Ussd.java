@@ -23,6 +23,7 @@ public class Ussd extends CordovaPlugin {
         if (action.equals("dial")) {
 
             String code = data.getString(0);
+            Int sim=0;
 //             String name = data.getString(0);
 //             String message = "Hello, " + name;
 
