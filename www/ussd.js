@@ -3,9 +3,12 @@
 //         callback('Nothing to echo.');
 //     }, "ussd", "dial", [str]);
 // };
-
+cordova.define
 var exec = require('cordova/exec');
 
-exports.ussd = function (str, success, error) {
-    exec(success, error, 'ussd', 'dial', [str])
-};
+module.exports={
+    ussd : function (str, success, error) {
+        exec(success, error, 'ussd', 'dial', [str])
+    }
+}
+
