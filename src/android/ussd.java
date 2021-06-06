@@ -1,4 +1,4 @@
-package ng.neiel.cordova.plugin;
+package ng.neiel.cordova.plugin.ussd;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
