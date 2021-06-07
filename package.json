@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-ussd",
-  "version": "0.1.0",
+  "version": "0.7.0",
   "description": "Cordova plugin for dialing USSD codes",
   "cordova": {
     "id": "cordova-plugin-ussd",
@@ -19,7 +19,7 @@
     "ecosystem:cordova",
     "cordova-android"
   ],
-  "author": "NeielHQ",
+  "author": "NeielHQ & NaijaSteveJobs",
   "license": "Apache-2",
   "bugs": {
     "url": "https://github.com/NeielHQ/cordova-plugin-ussd/issues"

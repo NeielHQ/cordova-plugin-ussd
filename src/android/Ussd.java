@@ -9,7 +9,6 @@ import java.util.List;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.telephony.TelephonyManager;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
@@ -26,8 +25,8 @@ public class Ussd extends CordovaPlugin {
 
             String ussdCode = data.getString(0);
             int sim=data.getInt(1);
-            SubscriptionInfo SIM1_id=(SubscriptionInfo);
-            SubscriptionInfo SIM2_id=(SubscriptionInfo);
+            SubscriptionInfo SIM1_id=null;
+            SubscriptionInfo SIM2_id=null;
 //             String name = data.getString(0);
 //             String message = "Hello, " + name;
 //todo add check for valid USSD code
