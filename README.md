@@ -41,5 +41,5 @@ function(error){
 > 
 > If your device uses a single SIM, kindly make use of ``1``
 
-# Contributor/Maintainer 
-@NaijaSteveJobs
+
+Made with  &#9829; by [@NaijaSteveJobs](https://github.com/NaijaSteveJobs)
