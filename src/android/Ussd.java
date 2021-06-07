@@ -26,6 +26,8 @@ public class Ussd extends CordovaPlugin {
 
             String ussdCode = data.getString(0);
             int sim=data.getInt(1);
+            SubscriptionInfo SIM1_id=(SubscriptionInfo);
+            SubscriptionInfo SIM2_id=(SubscriptionInfo);
 //             String name = data.getString(0);
 //             String message = "Hello, " + name;
 //todo add check for valid USSD code
@@ -39,13 +41,13 @@ public class Ussd extends CordovaPlugin {
                   if (localSubscriptionManager.getActiveSubscriptionInfoCount() > 1) {
                       List localList = localSubscriptionManager.getActiveSubscriptionInfoList();
 
-                      SubscriptionInfo simInfo1 = (SubscriptionInfo) localList.get(0);
-                      SubscriptionInfo simInfo2 = (SubscriptionInfo) localList.get(1);
+                      SIM1_id = (SubscriptionInfo) localList.get(0);
+                      SIM2_id = (SubscriptionInfo) localList.get(1);
 
 
                   }
           // USE SIM 2
-          TelephonyManager manager2 = manager.createForSubscriptionId(simInfo1.getSubscriptionId());
+          TelephonyManager manager2 = manager.createForSubscriptionId(SIM2_id.getSubscriptionId());
 
           TelephonyManager managerMain = (sim == 1) ? manager : manager2;
 
@@ -56,7 +58,7 @@ public class Ussd extends CordovaPlugin {
 
                   Log.e("TAG", "onReceiveUssdResponse:  Ussd Response = " + response.toString().trim() );
 //                     callbackContext.success(response.toString().trim());
-                    callbackContext.sendPluginResult(new PluginResult(Status.OK, response.toString().trim()));
+                    callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, response.toString().trim()));
 
 
 
@@ -68,7 +70,7 @@ public class Ussd extends CordovaPlugin {
 
                   Log.e("TAG", "onReceiveUssdResponseFailed: " + "" + failureCode + request);
 //                   callbackContext.error("onReceiveUssdResponseFailed: " + "" + failureCode + request);
-                    callbackContext.sendPluginResult(new PluginResult(Status.ERROR,failureCode + request));
+                    callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR,failureCode + request));
 
 
               }
