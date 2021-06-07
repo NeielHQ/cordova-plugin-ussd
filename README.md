@@ -19,7 +19,7 @@ cordova plugin add cordova-plugin-ussd
 cordova plugin add https://github.com/NeielHQ/cordova-plugin-ussd
 ```
 
-##Usage
+## Usage
 
 ```javascript
 ussd.dial(ussdCode, SIM, successCallBack, errorCallback);
@@ -41,3 +41,5 @@ function(error){
 > 
 > If your device uses a single SIM, kindly make use of ``1``
 
+# Contributor/Maintainer 
+@NaijaSteveJobs
