@@ -7,8 +7,8 @@ An awesome cordova plugin for dialing USSD code without leaving the app, with op
 3. Get feedback of USSD code
 
 ## Requirements 
--Android 8.0+ 
->**Note**: Its restricted to Android 8.0+ because in the native code I implemented ```sendUssdRequest ``` and this is only included in API 26+ (Android 8+) I chose this method because other methods/plugins load/make a request via the default phone/calling app, which sometimes sends your Cordova app to the background.
+- Android 8.0+ 
+>**Note**: Its restricted to Android 8.0+ because in the native code I implemented ```sendUssdRequest``` and this is only included in API 26+ (Android 8+) I chose this method because other methods/plugins load/make a request via the default phone/calling app, which sometimes sends your Cordova app to the background.
 
 ## Installation
 ```shell 
