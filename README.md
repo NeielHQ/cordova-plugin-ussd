@@ -42,4 +42,4 @@ function(error){
 > If your device uses a single SIM, kindly make use of ``1``
 
 
-Made with  &#9829; by [@NaijaSteveJobs](https://github.com/NaijaSteveJobs)
+Made with  &#9829; by [@LimitlessDonald](https://github.com/LimitlessDonald)
